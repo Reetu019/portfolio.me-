@@ -11,53 +11,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
-        body {
-            background-color: #0a0a1a;
-            color: #e0e0e0;
-            font-family: 'Inter', sans-serif;
-        }
-        .font-orbitron {
-            font-family: 'Orbitron', sans-serif;
-        }
-        #bg-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .glass-effect {
-            background: rgba(10, 10, 26, 0.3);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -30px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #4f46e5;
-            border: 4px solid #0a0a1a;
-        }
-        .gallery-thumbnail {
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-        }
-        .gallery-thumbnail.active,
-        .gallery-thumbnail:hover {
-            border-color: #4f46e5;
-        }
+        .font-orbitron { font-family: 'Orbitron', sans-serif; }
     </style>
 </head>
-<body class="antialiased">
-    <canvas id="bg-canvas"></canvas>
+<body class="antialiased bg-[#0a0a1a] text-gray-200" style="font-family: 'Inter', sans-serif;">
+    <canvas id="bg-canvas" class="fixed inset-0 w-full h-full -z-10"></canvas>
 
     <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-24">
         <header class="text-center mb-16 sm:mb-24">
@@ -68,13 +26,44 @@
         <main>
             <!-- About Section -->
             <section id="about" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-6 flex items-center">
                         <i class="fas fa-user-astronaut mr-4 text-indigo-400"></i>About Me
                     </h2>
                     <p class="text-base sm:text-lg leading-relaxed">
                         Passionate aerospace engineering student with a keen interest in unraveling the mysteries of outer space. I am dedicated to mastering cutting-edge space technologies and actively engaged in research to ensure sustainable life in space environments. My commitment extends to the self-driven exploration of sustainable fuel solutions for extended space voyages, pushing the boundaries of what's possible in cosmic exploration.
                     </p>
+                </div>
+            </section>
+
+            <!-- Simulation Reports Section -->
+            <section id="reports" class="mb-16 sm:mb-24">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
+                    <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-8 flex items-center">
+                        <i class="fas fa-file-pdf mr-4 text-indigo-400"></i>Simulation Reports
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-indigo-300">ANSYS Fluent Simulation Report</h3>
+                                <p class="text-gray-400">General simulation report and results.</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="report.html?file=assests/docs/Ansys_Fluent_Simulation_Report.pdf" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">View</a>
+                                <a href="assests/docs/Ansys_Fluent_Simulation_Report.pdf" target="_blank" class="text-indigo-400">Download</a>
+                            </div>
+                        </div>
+                        <div class="bg-gray-800/50 p-6 rounded-lg flex items-start justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-indigo-300">ANSYS Fluent Simulation Report — 60 rpm</h3>
+                                <p class="text-gray-400">Case study and results at 60 rpm.</p>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <a href="report.html?file=assests/docs/Ansys_Fluent_Simulation_Report60rpm.pdf" class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">View</a>
+                                <a href="assests/docs/Ansys_Fluent_Simulation_Report60rpm.pdf" target="_blank" class="text-indigo-400">Download</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -85,8 +74,9 @@
                 </h2>
                 <div class="relative border-l-2 border-indigo-500/30 ml-8 sm:ml-0 sm:pl-8">
                     <!-- Item 1 -->
-                    <div class="mb-12 pl-8 sm:pl-0 relative timeline-item">
-                        <div class="glass-effect rounded-2xl p-6">
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
                             <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Technical Lead</h3>
                             <p class="text-md text-gray-400 mb-2">TECHNIKI | Gurugram, Haryana, India</p>
                             <p class="text-sm text-gray-500 mb-4">October 2024 - July 2025 (10 months)</p>
@@ -94,12 +84,96 @@
                         </div>
                     </div>
                     <!-- Item 2 -->
-                    <div class="mb-12 pl-8 sm:pl-0 relative timeline-item">
-                        <div class="glass-effect rounded-2xl p-6">
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
                             <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">System Engineer</h3>
                             <p class="text-md text-gray-400 mb-2">Space Technology and Aeronautical Rocketry | Surat, Gujarat, India</p>
                             <p class="text-sm text-gray-500 mb-4">June 2025 - July 2025 (2 months)</p>
                             <p>Worked with a team to build a 1U CubeSat, focusing on its mechanical design, simulation, and learning electronics.</p>
+                        </div>
+                    </div>
+                    <!-- Item 3: Research Lead -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Research Lead — IAC25</h3>
+                            <p class="text-md text-gray-400 mb-2">International Astronautical Congress (IAC) • Sydney, Australia</p>
+                            <p class="text-sm text-gray-500 mb-4">Published Oct 2025</p>
+                            <p>Lead author for the paper "Fourth Space: Innovating public engagement to unlock inclusive space business models" (DOI: 083102-0052). Focused on public engagement frameworks and sustainable space business strategies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Resume Item: IoT & Robotics Intern -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">IoT & Robotics Intern — ROBOTICS SIR</h3>
+                            <p class="text-md text-gray-400 mb-2">Conditional Internship Offer (PPO)</p>
+                            <p class="text-sm text-gray-500 mb-4">2026</p>
+                            <p>Worked on CAD prototyping and IoT projects for education KIT product line. Received a Pre-Placement Offer based on internship performance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Resume Item: Faculty – IoT & Robotics -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Faculty — IoT & Robotics</h3>
+                            <p class="text-md text-gray-400 mb-2">Team Mechanics</p>
+                            <p class="text-sm text-gray-500 mb-4">2025</p>
+                            <p>Taught students IoT systems, embedded electronics, and robotics fundamentals; developed course materials and hands-on labs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Resume Item: Systems Engineer Intern — STAR -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Systems Engineer Intern — STAR</h3>
+                            <p class="text-md text-gray-400 mb-2">Space Technology and Aeronautical Rocketry</p>
+                            <p class="text-sm text-gray-500 mb-4">2024</p>
+                            <p>Contributed to mechanical design, structural simulation, and integration of a 1U CubeSat. Performed FEA in Ansys and supported electronics integration.</p>
+                        </div>
+                    </div>
+                    <!-- Item 4: Vice President, Techniki -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Vice President — Techniki</h3>
+                            <p class="text-md text-gray-400 mb-2">Techniki (Technical Club)</p>
+                            <p class="text-sm text-gray-500 mb-4">Leadership & Club Management</p>
+                            <p>Organized technical events, mentored members, and led innovation initiatives across projects and competitions.</p>
+                        </div>
+                    </div>
+                    <!-- Item 5: Racing Drone Engineer -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Racing Drone Engineer</h3>
+                            <p class="text-md text-gray-400 mb-2">Personal Project</p>
+                            <p class="text-sm text-gray-500 mb-4">Ongoing</p>
+                            <p>Designed and built high-performance racing drones using ArduPilot, focusing on lightweight structures and advanced flight control.</p>
+                        </div>
+                    </div>
+                    <!-- Item 6: RC Boat Builder -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">RC Boat Builder</h3>
+                            <p class="text-md text-gray-400 mb-2">Personal Project</p>
+                            <p class="text-sm text-gray-500 mb-4">Completed</p>
+                            <p>Engineered and built a racing RC boat powered by a BLDC motor and ESC, achieving high-speed performance.</p>
+                        </div>
+                    </div>
+                    <!-- Item 7: Robo Car Developer -->
+                    <div class="mb-12 pl-8 sm:pl-0 relative">
+                        <span class="absolute -left-8 top-1/2 transform -translate-y-1/2 w-5 h-5 rounded-full bg-indigo-500 border-4 border-[#0a0a1a]"></span>
+                        <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-6">
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Robo Car Developer</h3>
+                            <p class="text-md text-gray-400 mb-2">Personal Project</p>
+                            <p class="text-sm text-gray-500 mb-4">Completed</p>
+                            <p>Built a racing robo car using ESP8266 and motor driver modules for wireless control and telemetry.</p>
                         </div>
                     </div>
                 </div>
@@ -107,7 +181,7 @@
 
             <!-- Projects Section -->
             <section id="projects" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-8 flex items-center">
                         <i class="fas fa-project-diagram mr-4 text-indigo-400"></i>Key Projects
                     </h2>
@@ -131,6 +205,16 @@
                             </p>
                         </div>
                         <div>
+                            <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">Wing Design (ANSYS Fluent)</h3>
+                            <p class="text-base leading-relaxed mt-2">
+                                CFD simulation and analysis of a wing using ANSYS Fluent. Report and results available in project docs.
+                                <br>
+                                <a href="assests/docs/Ansys_Fluent_Simulation_Report.pdf" target="_blank" class="inline-block mt-2 text-indigo-400 hover:text-indigo-300">
+                                    View Report (PDF)
+                                </a>
+                            </p>
+                        </div>
+                        <div>
                             <h3 class="text-xl sm:text-2xl font-bold text-indigo-300">RC Boat Builder</h3>
                             <p class="text-base leading-relaxed mt-2">
                                 Engineered and constructed a racing RC boat powered by a BLDC motor and ESC, achieving high-speed performance on the water.
@@ -148,7 +232,7 @@
 
             <!-- Research Papers Section -->
             <section id="research" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-8 flex items-center">
                         <i class="fas fa-scroll mr-4 text-indigo-400"></i>Research Papers
                     </h2>
@@ -175,7 +259,7 @@
 
             <!-- Core Competencies Section -->
             <section id="skills" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-8 flex items-center">
                         <i class="fas fa-cogs mr-4 text-indigo-400"></i>Core Competencies
                     </h2>
@@ -216,40 +300,77 @@
                             <i class="fas fa-code text-3xl mb-2 text-indigo-400"></i>
                             <p>Arduino IDE</p>
                         </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-cube text-3xl mb-2 text-indigo-400"></i>
+                            <p>SolidWorks</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-gears text-3xl mb-2 text-indigo-400"></i>
+                            <p>Autodesk Fusion</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-vector-square text-3xl mb-2 text-indigo-400"></i>
+                            <p>Shapr3D</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-cloud text-3xl mb-2 text-indigo-400"></i>
+                            <p>OnShape</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-print text-3xl mb-2 text-indigo-400"></i>
+                            <p>3D Printing</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-robot text-3xl mb-2 text-indigo-400"></i>
+                            <p>Robotics & IoT</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-vr-cardboard text-3xl mb-2 text-indigo-400"></i>
+                            <p>FEA (Finite Element Analysis)</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-ruler-combined text-3xl mb-2 text-indigo-400"></i>
+                            <p>FEM</p>
+                        </div>
+                        <div class="bg-gray-800/50 p-4 rounded-lg hover:bg-indigo-500/20 transition-colors duration-300">
+                            <i class="fas fa-water text-3xl mb-2 text-indigo-400"></i>
+                            <p>CFD (ANSYS)</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Work Highlights Gallery Section -->
             <section id="work-highlights" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-8 flex items-center">
                         <i class="fas fa-images mr-4 text-indigo-400"></i>Work Highlights
                     </h2>
                     
                     <!-- Main Image Display -->
                     <div id="work-gallery-main-view" class="mb-8 text-center">
-                        <img id="main-work-gallery-image" src="assests/core1.png" alt="Open Rocket Simulation" class="w-full max-w-3xl mx-auto rounded-lg mb-4 border-2 border-indigo-500/50 object-contain" style="max-height: 500px; object-fit: cover;">
+                        <img id="main-work-gallery-image" src="assests/core1.png" alt="Open Rocket Simulation" class="w-full max-w-3xl mx-auto rounded-lg mb-4 border-2 border-indigo-500/50 max-h-[500px] object-cover">
                         <h3 id="main-work-gallery-title" class="text-2xl font-bold text-indigo-300">Open Rocket Simulation</h3>
                         <p id="main-work-gallery-description" class="text-gray-400 mt-2">Rocket design and simulation software for estimating performance.</p>
                     </div>
 
                     <!-- Thumbnails -->
                     <div id="work-gallery-thumbnails" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-                        <img src="assests/core1.png" alt="Open Rocket Simulation" class="gallery-thumbnail active w-full h-24 object-cover rounded-md" data-title="Open Rocket Simulation" data-description="Rocket design and simulation software for estimating performance.">
-                        <img src="assests/Screenshot 2025-06-24 210335.png" alt="Project 2" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="CST Studio Project" data-description="Add a description for your CST Studio project here.">
-                        <img src="assests/Export.Image.suggestedname.prefix.Win-2025-07-30 181359.png" alt="Project 3" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="CAD Model" data-description="Showcase a CAD model you designed.">
-                        <img src="assests/WhatsApp Image 2025-07-30 at 21.49.21_404b4ad1.jpg" alt="Project 4" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="Robotics Project" data-description="An image of your IoT or robotics work.">
-                        <img src="assests/Screenshot 2025-07-04 090358.png" alt="Project 5" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="Simulation" data-description="Simulation for FEA.">
-                        <img src="assests/WhatsApp Image 2025-07-30 at 21.57.34_9a8c6b62.jpg" alt="Project 6" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="Hardware Project" data-description="A photo of a hardware project using Arduino or Raspberry Pi.">
-                         <img src="assests/WhatsApp Image 2025-07-07 at 20.13.46_0b8a6530.jpg" alt="Project 7" class="gallery-thumbnail w-full h-24 object-cover rounded-md" data-title="CUBESAT" data-description="Cubesat I Designed and developed at STAR with my team.">
+                        <img src="assests/core1.png" alt="Open Rocket Simulation" class="gallery-thumbnail border-2 border-indigo-500 w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="Open Rocket Simulation" data-description="Rocket design and simulation software for estimating performance.">
+                        <img src="assests/Screenshot 2025-06-24 210335.png" alt="Project 2" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="CST Studio Project" data-description="Add a description for your CST Studio project here.">
+                        <img src="assests/Export.Image.suggestedname.prefix.Win-2025-07-30 181359.png" alt="Project 3" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="CAD Model" data-description="Showcase a CAD model you designed.">
+                        <img src="assests/WhatsApp Image 2025-07-30 at 21.49.21_404b4ad1.jpg" alt="Project 4" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="Robotics Project" data-description="An image of your IoT or robotics work.">
+                        <img src="assests/Screenshot 2025-07-04 090358.png" alt="Project 5" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="Simulation" data-description="Simulation for FEA.">
+                        <img src="assests/WhatsApp Image 2025-07-30 at 21.57.34_9a8c6b62.jpg" alt="Project 6" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="Hardware Project" data-description="A photo of a hardware project using Arduino or Raspberry Pi.">
+                         <img src="assests/WhatsApp Image 2025-07-07 at 20.13.46_0b8a6530.jpg" alt="Project 7" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="CUBESAT" data-description="Cubesat I Designed and developed at STAR with my team.">
+                            <img src="assests/wing_design.png" alt="Wing Design" class="gallery-thumbnail border-2 border-transparent w-full h-24 object-cover rounded-md cursor-pointer transition-colors" data-title="Wing Design (ANSYS Fluent)" data-description="CFD simulation results for a wing — report in project docs.">
                     </div>
                 </div>
             </section>
 
             <!-- Education Section -->
             <section id="education" class="mb-16 sm:mb-24">
-                <div class="glass-effect rounded-2xl p-8 sm:p-12">
+                <div class="bg-[rgba(10,10,26,0.3)] backdrop-blur-xl border border-white/10 rounded-2xl p-8 sm:p-12">
                     <h2 class="text-3xl sm:text-4xl font-orbitron font-bold text-white mb-6 flex items-center">
                         <i class="fas fa-graduation-cap mr-4 text-indigo-400"></i>Education
                     </h2>
@@ -352,7 +473,7 @@
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
 
-        // Work Highlights Gallery Logic
+        // Work Highlights Gallery Logic (uses Tailwind border class for active)
         const workThumbnailsContainer = document.getElementById('work-gallery-thumbnails');
         const mainWorkImage = document.getElementById('main-work-gallery-image');
         const mainWorkTitle = document.getElementById('main-work-gallery-title');
@@ -360,13 +481,15 @@
 
         workThumbnailsContainer.addEventListener('click', (e) => {
             if (e.target.tagName === 'IMG') {
-                // Remove active class from all thumbnails
+                // Remove active border from all thumbnails
                 workThumbnailsContainer.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
-                    thumb.classList.remove('active');
+                    thumb.classList.remove('border-indigo-500');
+                    thumb.classList.add('border-transparent');
                 });
 
-                // Add active class to clicked thumbnail
-                e.target.classList.add('active');
+                // Add active border to clicked thumbnail
+                e.target.classList.add('border-indigo-500');
+                e.target.classList.remove('border-transparent');
 
                 // Update main view
                 mainWorkImage.src = e.target.src;
@@ -380,7 +503,7 @@
         document.addEventListener('keydown', function(event) {
             if (document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA') return;
             const thumbnails = Array.from(workThumbnailsContainer.querySelectorAll('.gallery-thumbnail'));
-            const activeIndex = thumbnails.findIndex(thumb => thumb.classList.contains('active'));
+            const activeIndex = thumbnails.findIndex(thumb => thumb.classList.contains('border-indigo-500'));
             if (event.key === 'ArrowRight') {
                 let nextIndex = (activeIndex + 1) % thumbnails.length;
                 thumbnails[nextIndex].click();

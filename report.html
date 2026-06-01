@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Viewer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a0a1a] text-gray-200">
+    <div class="container mx-auto p-6">
+        <div class="flex items-center justify-between mb-4">
+            <h1 class="text-2xl font-bold">Simulation Report Viewer</h1>
+            <div class="space-x-4">
+                <a href="index.html" class="text-indigo-400">Back to site</a>
+            </div>
+        </div>
+        <div id="viewer" class="w-full h-[80vh] bg-black rounded-lg overflow-hidden">
+            <iframe id="pdfFrame" src="" class="w-full h-full" frameborder="0"></iframe>
+        </div>
+        <p id="fallback" class="mt-4 text-gray-400"></p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const file = params.get('file');
+        const pdfFrame = document.getElementById('pdfFrame');
+        const fallback = document.getElementById('fallback');
+        if (file) {
+            // Use a safe relative URL
+            pdfFrame.src = file;
+            fallback.innerHTML = `If the PDF doesn't load, <a href="${file}" target="_blank" class="text-indigo-400">open it directly</a>.`;
+        } else {
+            fallback.textContent = 'No report specified. Use a link from the main site.';
+        }
+    </script>
+</body>
+</html>

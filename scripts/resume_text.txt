@@ -1,0 +1,61 @@
+REETUNJAI DUTTA 
++91 8011245514 | reetunjaid@gmail.com | LinkedIn | Haryana, India 
+PROFESSIONAL SUMMARY 
+Aerospace Engineering student (B.Tech 2023–27, CGPA: 7.9) with hands-on experience in satellite systems engineering, CAD design, structural 
+simulation, and embedded systems. Contributed to a 1U CubeSat as Systems Engineer Intern and published research at IAC 2025 (Sydney, 
+Australia). Proficient in Ansys FEA/CFD, Solidworks, ArduPilot, Python, and Arduino. Silver Medalist in Drone Race and runner-up in Robotics 
+Race at Amity University. Seeking to apply technical expertise and space-sector passion at Dhruva Space. 
+TECHNICAL SKILLS 
+CAD & Design: Solidworks, Autodesk Fusion 360, OnShape, Shapr3D 
+Simulation & Analysis: Ansys FEA, Ansys CFD, CST Studio Suite, Finite Element Analysis 
+Programming: Python, C Embedded (Beginner), Arduino IDE 
+Hardware & Embedded: Arduino UNO, ESP32, ESP8266, Raspberry Pi 
+Aerospace Systems: Satellite Systems (1U CubeSat), ArduPilot, BLDC Motors/ESC, Rocker-Bogie Suspension 
+Fabrication & Other: 3D Printing (PLA), Rapid Prototyping, Robotics & IoT Systems, Research & Technical Writing 
+WORK EXPERIENCE 
+IoT & Robotics Intern — ROBOTICS SIR 2026 
+Conditional Internship Offer (PPO)  
+• Working on CAD prototyping and IoT projects for their Education KIT product line. 
+• Received Pre-Placement Offer (PPO) based on internship performance. 
+Technologies Used: CAD, IoT, Solidworks, Prototyping 
+Faculty – IoT & Robotics — TEAM MECHANICS 2025  
+• Working as faculty to teach students about IoT systems, embedded electronics, and Robotics fundamentals. 
+Technologies Used: Arduino, ESP32, IoT Systems, Embedded C 
+Systems Engineer Intern — STAR (Space Technology and Aeronautical Rocketry) 2024  
+• Contributing to the mechanical design, structural simulation, and integration of a 1U CubeSat. 
+• Performing FEA simulations in Ansys to validate structural integrity of satellite components. 
+• Supporting electronics integration and learning subsystem interfaces for the CubeSat platform. 
+• Collaborating within a multidisciplinary engineering team following satellite development workflows. 
+Technologies Used: Solidworks, Ansys FEA, Ansys CFD, Arduino, Systems Engineering 
+PROJECTS 
+IAC 2025 Research Paper – Lead Author  2025 
+• Led a research team; authored paper selected for the International Astronautical Congress 2025, Sydney, Australia (DOI: 083102-0052). 
+• Paper: "Fourth Space: Innovating Public Engagement to Unlock Inclusive Space Business Models." Demonstrated space-sector research 
+and team leadership. 
+3D-Printed RC Aircraft & RC Boat 2024 
+• Designed and 3D-printed a functional RC aircraft using PLA; applied aerodynamic design and rapid prototyping principles. 
+• Built a BLDC-powered RC racing boat and a wireless robo car using ESP8266 and motor driver modules. 
+Technologies Used: Solidworks, 3D Printing, BLDC, ESP8266, Arduino IDE 
+1U CubeSat – Mechanical Design & Simulation 2024  
+• Designed and simulated CubeSat structural components; validated frame integrity against launch and vibration load requirements. 
+• Applied Ansys FEA for stress and deformation analysis; iterated designs for weight reduction and structural compliance. 
+• Gained hands-on experience in satellite subsystem integration and space hardware documentation. 
+Racing Drone – ArduPilot Flight Controller 2023  
+• Designed and built a racing drone; integrated BLDC motors, ESC, and telemetry; tuned PID parameters for stable flight. 
+• Won Silver Medal at Inter-University Drone Race Competition, Amity University 2024. 
+Technologies Used: ArduPilot, BLDC Motors, ESC, PID Tuning, Arduino 
+ASTRIX Rover – CAD Design 2024 – Present 
+• Designing a planetary rover with rocker-bogie suspension in Solidworks/Fusion 360; applying mechanical design principles for terrain 
+adaptability. 
+EDUCATION 
+Bachelor of Technology – Aerospace Engineering 2023 – 2027 
+Amity University Haryana CGPA: 7.9 
+
+CERTIFICATIONS & ACHIEVEMENTS 
+Selected for IP – International Astronautical Congress (IAC 2025), Sydney, Australia | DOI: 083102-0052 
+Silver Medalist – Drone Race Competition, Inter-University Fest, Amity University 2024 
+2nd Prize – Robotics Race, Amifest 2026, Amity University Haryana 
+Certificate of Participation – IoT Mobile Robotics with Arduino, TRYST-IIT Delhi (March 2024) 
+Certificate of Participation – ISRO AI Immersion Challenge, IIIT Hyderabad & NRSC-ISRO (August 2024) 
+Certification – Aerospace Engineering: Rocket Science and Engineering (Udemy) 
+Certification – Drone Systems and Control (SWAYAM Portal) 
